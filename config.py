@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 # Copyright (C) @subinps
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -34,26 +34,26 @@ class Config:
     ADMIN = os.environ.get("ADMINS", '')
     SUDO = [int(admin) for admin in (ADMIN).split()] # Exclusive for heroku vars configuration.
     ADMINS = [int(admin) for admin in (ADMIN).split()] #group admins will be appended to this list.
-    API_ID = int(os.environ.get("API_ID", ''))
-    API_HASH = os.environ.get("API_HASH", "")
+    API_ID = int(os.environ.get("API_ID", "5948661"))
+    API_HASH = os.environ.get("API_HASH", "ed081430c75f3e0b9a95b3b5d461fa73")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")     
     SESSION = os.environ.get("SESSION_STRING", "")
 
     #Stream Chat and Log Group
-    CHAT = int(os.environ.get("CHAT", ""))
-    LOG_GROUP=os.environ.get("LOG_GROUP", "")
+    CHAT = int(os.environ.get("CHAT", "-1001543572778"))
+    LOG_GROUP=os.environ.get("LOG_GROUP", "-1001543572778")
 
     #Stream 
-    STREAM_URL=os.environ.get("STARTUP_STREAM", "https://www.youtube.com/watch?v=zcrUCvBD16k")
+    STREAM_URL=os.environ.get("STARTUP_STREAM", "http://live.siyathatv.lk:19904/hls/siyatha_tv.m3u8?25")
    
     #Database
-    DATABASE_URI=os.environ.get("DATABASE_URI", None)
-    DATABASE_NAME=os.environ.get("DATABASE_NAME", "VCPlayerBot")
+    DATABASE_URI=os.environ.get("DATABASE_URI", "mongodb://mongo:73epkpnB6111YelujdMR@containers-us-west-7.railway.app:6136")
+    DATABASE_NAME=os.environ.get("DATABASE_NAME", "StreamHeroBot")
 
 
     #heroku
-    API_KEY=os.environ.get("HEROKU_API_KEY", None)
-    APP_NAME=os.environ.get("HEROKU_APP_NAME", None)
+    API_KEY=os.environ.get("HEROKU_API_KEY", "")
+    APP_NAME=os.environ.get("HEROKU_APP_NAME", "")
 
 
     #Optional Configuration
